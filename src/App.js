@@ -1,19 +1,21 @@
 // src/App.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Word from './components/Palabra';
 import Keyboard from './components/Teclado';
 import Hangman from './components/Ahorcado';
 
 function App() {
-  const words = ['react', 'javascript', 'programacion', 'ahorcado', 'desarrollo'];
+  const words = useMemo(
+    () => ['react', 'javascript', 'programacion', 'ahorcado', 'desarrollo'],
+    []
+  );
   const [word, setWord] = useState('');
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [mistakes, setMistakes] = useState(0);
   const maxMistakes = 6;
 
-// tomamos una palabra aleatoria de la lista. 
-// Despues damos a la variable de estado word el valor randomWord
+  // Selecciona una palabra aleatoria de la lista al montar el componente
   useEffect(() => {
     const randomWord = words[Math.floor(Math.random() * words.length)];
     setWord(randomWord);
@@ -21,9 +23,9 @@ function App() {
 
   const handleLetterClick = (letter) => {
     if (word.includes(letter)) {
-      setGuessedLetters([...guessedLetters, letter]);
+      setGuessedLetters((prev) => [...prev, letter]);
     } else {
-      setMistakes(mistakes + 1);
+      setMistakes((prev) => prev + 1);
     }
   };
 
@@ -62,4 +64,3 @@ function App() {
 }
 
 export default App;
-

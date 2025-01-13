@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/juegoAhorcado/static/css/main.e6c13ad2.css",
+    "main.js": "/juegoAhorcado/static/js/main.542918ea.js",
+    "static/js/453.ae5e1f5d.chunk.js": "/juegoAhorcado/static/js/453.ae5e1f5d.chunk.js",
+    "index.html": "/juegoAhorcado/index.html",
+    "main.e6c13ad2.css.map": "/juegoAhorcado/static/css/main.e6c13ad2.css.map",
+    "main.542918ea.js.map": "/juegoAhorcado/static/js/main.542918ea.js.map",
+    "453.ae5e1f5d.chunk.js.map": "/juegoAhorcado/static/js/453.ae5e1f5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.542918ea.js"
+  ]
+}

@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const randomWord = words[Math.floor(Math.random() * words.length)];
     setWord(randomWord);
-  }, []);
+  }, [words]);
 
   const handleLetterClick = (letter) => {
     if (word.includes(letter)) {
